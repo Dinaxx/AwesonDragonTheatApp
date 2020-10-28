@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "title": "AwesomDragon",
+    "owner": "Yopi",
+    "description": "Apps security"
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Raúl Hernández"
+      },
+      {
+        "name": "Cristian Aguilar"
+      },
+      {
+        "name": "Kenneth Coronado"
+      },
+      {
+        "name": "Luis Gabriel"
+      },
+      {
+        "name": "Josue Ponciano"
+      }
+    ],
+    "diagrams": [
+      {
+        "title": "CMS e-commers",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      },
+      {
+        "title": "Bank system",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 1
+      },
+      {
+        "title": "DB manage",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 2
+      }
+    ],
+    "reviewer": "Awesom"
+  }
+}
