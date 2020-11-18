@@ -36,8 +36,8 @@
                 "height": 100
               },
               "position": {
-                "x": 208,
-                "y": 237
+                "x": 170,
+                "y": 260
               },
               "angle": 0,
               "id": "a757e49d-cd43-41dd-9736-eb5fc6ddaab1",
@@ -48,7 +48,7 @@
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "process 0"
+                  "text": "Aplicación Web"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -62,8 +62,8 @@
                 "height": 100
               },
               "position": {
-                "x": 584,
-                "y": 245
+                "x": 480,
+                "y": 160
               },
               "angle": 0,
               "id": "1df2eb81-8d3f-493a-91bd-29a8401d67c9",
@@ -74,7 +74,7 @@
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "process 1"
+                  "text": "Procesos de\nfondo"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -88,8 +88,8 @@
                 "height": 100
               },
               "position": {
-                "x": 591,
-                "y": 45
+                "x": 280,
+                "y": 40
               },
               "angle": 0,
               "id": "7850c526-082f-45c6-9abc-4410add72581",
@@ -114,19 +114,20 @@
                 "height": 80
               },
               "position": {
-                "x": 554,
-                "y": 419
+                "x": 350,
+                "y": 470
               },
               "angle": 0,
               "id": "e01ee45c-6f95-440c-959f-19f15c089dae",
               "z": 4,
               "hasOpenThreats": false,
+              "storesCredentials": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "store 3"
+                  "text": "Base de datos"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -140,19 +141,20 @@
                 "height": 80
               },
               "position": {
-                "x": 176,
-                "y": 421
+                "x": 40,
+                "y": 470
               },
               "angle": 0,
               "id": "aa43920f-bcb4-4bc7-883a-a53e777a7cae",
               "z": 5,
               "hasOpenThreats": false,
+              "storesCredentials": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "store 4"
+                  "text": "Configuración web"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -160,25 +162,25 @@
               }
             },
             {
-              "type": "tm.Process",
+              "type": "tm.Actor",
               "size": {
-                "width": 100,
-                "height": 100
+                "width": 160,
+                "height": 80
               },
               "position": {
-                "x": 50,
+                "x": 20,
                 "y": 50
               },
               "angle": 0,
-              "id": "bdd827cc-4e03-463d-9a0c-bd299ba694aa",
-              "z": 6,
+              "id": "172af399-64ae-4558-9836-b3b8906d92ff",
+              "z": 13,
               "hasOpenThreats": false,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "process 5"
+                  "text": "Navegado"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -189,31 +191,245 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "id": "bdd827cc-4e03-463d-9a0c-bd299ba694aa"
+                "id": "172af399-64ae-4558-9836-b3b8906d92ff"
               },
               "target": {
                 "id": "a757e49d-cd43-41dd-9736-eb5fc6ddaab1"
               },
               "vertices": [
                 {
-                  "x": 238,
-                  "y": 148
+                  "x": 170,
+                  "y": 180
                 }
               ],
-              "id": "41ee1913-5f20-419c-8663-f88f100a9f9c",
+              "id": "d25aec88-905b-4ea6-b700-2b72fa569668",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.6415589817616772,
+                    "offset": -3.3769610587340915
+                  },
                   "attrs": {
                     "text": {
-                      "text": "Solicitud",
+                      "text": "Solicitudes",
                       "font-weight": "400",
                       "font-size": "small"
                     }
                   }
                 }
               ],
-              "z": 7,
+              "z": 14,
+              "hasOpenThreats": true,
+              "protocol": "HTTP",
+              "isPublicNetwork": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Ataques de SQL Injection",
+                  "type": "Spoofing",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "Ataques por inserción de código SQL desde el sitio web.",
+                  "mitigation": "WordPress protege sus campos realizando validación de contenido y sustituciones de caracteres especiales."
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Ataque de denegación de servicios",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "Múltiples ataques y/o solicitudes para detener los servicios del servidor Web.",
+                  "mitigation": "Contar con balanceadores de carga y desechar solicitudes no relevantes."
+                },
+                {
+                  "ruleId": "c1cae982-3e92-4bb2-b50b-ea51137fc3a7",
+                  "title": "No encriptar datos enviados",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "No se cuenta con un método para el cifrado de datos que envía en navegador.",
+                  "mitigation": "Cambiar el protocolo para el envío de datos de HTTP a HTTPS mediante certificados digitales."
+                },
+                {
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "title": "Cross-Site Scripting XSS",
+                  "type": "Spoofing"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Contraseñas débiles",
+                  "type": "Spoofing"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Ataques de fuerza bruta",
+                  "type": "Tampering"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "a757e49d-cd43-41dd-9736-eb5fc6ddaab1"
+              },
+              "target": {
+                "id": "172af399-64ae-4558-9836-b3b8906d92ff"
+              },
+              "vertices": [
+                {
+                  "x": 90,
+                  "y": 220
+                }
+              ],
+              "id": "9b89adc1-de76-4b50-abe0-3bff6f1ac772",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.40166695522522633,
+                    "offset": 2.7023402991082537
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Respuestas",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 15,
+              "hasOpenThreats": true,
+              "protocol": "HTTP",
+              "isPublicNetwork": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Fuga de datos involuntaria",
+                  "type": "Repudiation"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Ataque de hombre en el medio",
+                  "type": "Spoofing"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "aa43920f-bcb4-4bc7-883a-a53e777a7cae"
+              },
+              "target": {
+                "id": "a757e49d-cd43-41dd-9736-eb5fc6ddaab1"
+              },
+              "vertices": [
+                {
+                  "x": 180,
+                  "y": 420
+                }
+              ],
+              "id": "05499631-9e05-4c93-8e21-5c507d87c38e",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Lee configuración\nweb",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 16,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "reasonOutOfScope": "Sección para leer la configuración del sitio.",
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 60,
+                "y": 220
+              },
+              "target": {
+                "x": 360,
+                "y": 190
+              },
+              "vertices": [
+                {
+                  "x": 200,
+                  "y": 150
+                }
+              ],
+              "id": "6fcaa1ff-3a21-4bc6-99b6-b45befbe48e1",
+              "z": 17,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "e01ee45c-6f95-440c-959f-19f15c089dae"
+              },
+              "target": {
+                "id": "a757e49d-cd43-41dd-9736-eb5fc6ddaab1"
+              },
+              "vertices": [
+                {
+                  "x": 340,
+                  "y": 380
+                }
+              ],
+              "id": "f94415d9-b1eb-4414-ba86-ab20db372fdd",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.6180401334442018,
+                    "offset": 0.907837522333964
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Respuestas",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 18,
               "hasOpenThreats": false,
               "attrs": {
                 ".marker-target": {
@@ -231,28 +447,161 @@
                 "id": "a757e49d-cd43-41dd-9736-eb5fc6ddaab1"
               },
               "target": {
-                "id": "7850c526-082f-45c6-9abc-4410add72581"
+                "id": "e01ee45c-6f95-440c-959f-19f15c089dae"
               },
               "vertices": [
                 {
-                  "x": 497,
-                  "y": 214
+                  "x": 280,
+                  "y": 450
                 }
               ],
-              "id": "b0b94642-084a-4759-bb6d-fc2ddf76f1d4",
+              "id": "d163ea8d-c33f-442b-82b5-484a163c1dc0",
               "labels": [
                 {
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 7",
+                      "text": "Consultas",
                       "font-weight": "400",
                       "font-size": "small"
                     }
                   }
                 }
               ],
-              "z": 8,
+              "z": 19,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "title": "Almacenamiento de datos sensibles inseguro",
+                  "type": "Information disclosure"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Contraseñas débiles",
+                  "type": "Spoofing"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 240,
+                "y": 460
+              },
+              "target": {
+                "x": 570,
+                "y": 440
+              },
+              "vertices": [
+                {
+                  "x": 390,
+                  "y": 390
+                }
+              ],
+              "id": "45dc0269-e2ad-4c7c-9729-f576d74d6884",
+              "z": 20,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "e01ee45c-6f95-440c-959f-19f15c089dae"
+              },
+              "target": {
+                "id": "1df2eb81-8d3f-493a-91bd-29a8401d67c9"
+              },
+              "vertices": [
+                {
+                  "x": 470,
+                  "y": 360
+                }
+              ],
+              "id": "56b07f03-4b16-4422-a9d3-ca1a2590e497",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Procesos base de\ndatos",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 21,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "title": "Datos no cifrados en la red",
+                  "type": "Information disclosure"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Error de configuración",
+                  "type": "Tampering"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Ransomware",
+                  "type": "Tampering"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "1df2eb81-8d3f-493a-91bd-29a8401d67c9"
+              },
+              "target": {
+                "id": "e01ee45c-6f95-440c-959f-19f15c089dae"
+              },
+              "vertices": [
+                {
+                  "x": 570,
+                  "y": 400
+                }
+              ],
+              "id": "a49e898d-2b57-46ed-b873-c381e0de612a",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Resultado de\nprocesos",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 22,
               "hasOpenThreats": false,
               "attrs": {
                 ".marker-target": {
@@ -272,28 +621,97 @@
               "target": {
                 "id": "1df2eb81-8d3f-493a-91bd-29a8401d67c9"
               },
-              "vertices": [],
-              "id": "4df98341-457d-4a12-8ed0-eade1c718d83",
+              "vertices": [
+                {
+                  "x": 400,
+                  "y": 310
+                }
+              ],
+              "id": "5cd56c2f-3b8f-4d16-a59d-f94d15ae4dbb",
               "labels": [
                 {
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 8",
+                      "text": "Procesos web",
                       "font-weight": "400",
                       "font-size": "small"
                     }
                   }
                 }
               ],
-              "z": 9,
-              "hasOpenThreats": false,
+              "z": 23,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Control de acceso roto",
+                  "type": "Elevation of privilege"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Ransomware",
+                  "type": "Tampering"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "1df2eb81-8d3f-493a-91bd-29a8401d67c9"
+              },
+              "target": {
+                "id": "a757e49d-cd43-41dd-9736-eb5fc6ddaab1"
+              },
+              "vertices": [
+                {
+                  "x": 380,
+                  "y": 230
+                }
+              ],
+              "id": "0088cd67-cb9b-4dae-9b8b-9cd27a6e8906",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.265833899434556,
+                    "offset": 3.489781588686371
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Resultado de\nprocesos",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 24,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Contraseñas comprometidas",
+                  "type": "Information disclosure"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -304,28 +722,31 @@
                 "id": "a757e49d-cd43-41dd-9736-eb5fc6ddaab1"
               },
               "target": {
-                "id": "bdd827cc-4e03-463d-9a0c-bd299ba694aa"
+                "id": "7850c526-082f-45c6-9abc-4410add72581"
               },
               "vertices": [
                 {
-                  "x": 119,
-                  "y": 234
+                  "x": 250,
+                  "y": 180
                 }
               ],
-              "id": "a0dcfd69-aa45-4554-801a-726b97eacf6a",
+              "id": "1fb1c8cb-f2b3-4503-ace1-db42a57cc24c",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.5483582154224929,
+                    "offset": -7.167814856835061
+                  },
                   "attrs": {
                     "text": {
-                      "text": "Respuesta",
+                      "text": "flow 17",
                       "font-weight": "400",
                       "font-size": "small"
                     }
                   }
                 }
               ],
-              "z": 10,
+              "z": 25,
               "hasOpenThreats": false,
               "attrs": {
                 ".marker-target": {
@@ -347,24 +768,27 @@
               },
               "vertices": [
                 {
-                  "x": 431,
-                  "y": 145
+                  "x": 310,
+                  "y": 210
                 }
               ],
-              "id": "ba530101-1292-45ed-88c2-087c196337bb",
+              "id": "359eec1e-4703-44a7-aa5b-b13806534789",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.7791255502699403,
+                    "offset": 3.846950514076845
+                  },
                   "attrs": {
                     "text": {
-                      "text": "flow 10",
+                      "text": "flow 18",
                       "font-weight": "400",
                       "font-size": "small"
                     }
                   }
                 }
               ],
-              "z": 11,
+              "z": 26,
               "hasOpenThreats": false,
               "attrs": {
                 ".marker-target": {
@@ -376,43 +800,25 @@
               }
             },
             {
-              "type": "tm.Flow",
+              "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "id": "1df2eb81-8d3f-493a-91bd-29a8401d67c9"
+                "x": 330,
+                "y": 220
               },
               "target": {
-                "id": "a757e49d-cd43-41dd-9736-eb5fc6ddaab1"
+                "x": 440,
+                "y": 330
               },
               "vertices": [
                 {
-                  "x": 447,
-                  "y": 377
+                  "x": 420,
+                  "y": 250
                 }
               ],
-              "id": "8ca266be-7f3b-41f6-b657-0e3429a59977",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "flow 11",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 12,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
+              "id": "fe9d8abd-56e6-469b-876c-deb915ec8f72",
+              "z": 27,
+              "attrs": {}
             }
           ]
         },
