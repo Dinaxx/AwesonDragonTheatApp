@@ -42,16 +42,30 @@
               "angle": 0,
               "id": "a757e49d-cd43-41dd-9736-eb5fc6ddaab1",
               "z": 1,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "title": "Registro y monitoreo insuficientes",
+                  "type": "Tampering"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Control de acceso roto",
+                  "type": "Elevation of privilege"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Aplicación Web"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -95,12 +109,13 @@
               "id": "7850c526-082f-45c6-9abc-4410add72581",
               "z": 3,
               "hasOpenThreats": false,
+              "outOfScope": true,
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasNoOpenThreats isOutOfScope"
                 },
                 "text": {
-                  "text": "process 2"
+                  "text": "Servicios\nexternos"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -120,17 +135,31 @@
               "angle": 0,
               "id": "e01ee45c-6f95-440c-959f-19f15c089dae",
               "z": 4,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "storesCredentials": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Control de acceso roto",
+                  "type": "Elevation of privilege"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Fuga de datos involuntaria",
+                  "type": "Information disclosure"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Base de datos"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -734,12 +763,12 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.5483582154224929,
-                    "offset": -7.167814856835061
+                    "distance": 0.7075357576460037,
+                    "offset": -11.027533675778356
                   },
                   "attrs": {
                     "text": {
-                      "text": "flow 17",
+                      "text": "Solicitud de servicios",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -776,12 +805,12 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.7791255502699403,
-                    "offset": 3.846950514076845
+                    "distance": 0.7968516872379516,
+                    "offset": 12.479974211020233
                   },
                   "attrs": {
                     "text": {
-                      "text": "flow 18",
+                      "text": "Respuesta de\nsolicitud",
                       "font-weight": "400",
                       "font-size": "small"
                     }
