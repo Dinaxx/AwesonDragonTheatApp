@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "title": "Model Cliente Servidor",
+    "owner": "Yop"
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Raúl Hernández"
+      },
+      {
+        "name": "Cristian Aguilar"
+      },
+      {
+        "name": "Josue Ponciano"
+      },
+      {
+        "name": "Luis Gabriel"
+      },
+      {
+        "name": "Kenneth Coronado"
+      }
+    ],
+    "diagrams": []
+  }
+}
